@@ -14,7 +14,7 @@ namespace FlightTracker5.Models
 
         [ForeignKey("Pilot")] //FK
         public int PilotID { get; set; }
-        public virtual Pilot Pilot { get; set; }
+        public virtual Pilot Pilot { get; set; }//Not quite sure
 
         //Date
         public DateTime Date { get; set; }
