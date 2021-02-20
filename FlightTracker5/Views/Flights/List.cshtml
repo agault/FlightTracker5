@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FlightTracker5.Models.FlightDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Flights</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p><div class="record-container">
+    @foreach (var flight in Model)
+    {
+        <div class="record">
+            <div class="_record">
+             
+                <nav class="linknav">
+                    <span class="editlink">@Html.ActionLink("Edit", "Edit", new { id = flight.FlightID })</span>
+                </nav>
+                <div class="recordtitle">
+                    @Html.ActionLink(flight.FlightID,
+                        "Flidghtid",
+                        new { id = flight.FlightID })
+                </div>
+
+
+            </div>
+        </div>
+    }
+</div>
+
+@*FlightID = Flight.FlightID,
+Date = Flight.Date,
+Duty = Flight.Duty,
+Seat = Flight.Seat,
+Mission = Flight.Mission,*@
